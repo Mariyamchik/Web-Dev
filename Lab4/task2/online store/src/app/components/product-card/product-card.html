@@ -1,0 +1,31 @@
+<div class="card">
+    <!-- [href] — property binding, подставляет значение из product.link -->
+    <!-- target="_blank" — открывает ссылку в новой вкладке -->
+    <a [href]="product.link" target="_blank">
+        <img [src]="product.image" [alt]="product.name" class="card-img" />
+    </a>
+
+    <div class="card-body">
+        <h3 class="card-tittle">
+            {{product.name}}
+        </h3>
+        <p class="card-desc">{{ product.description }}</p>
+
+    <div class="card-rating">
+      <!-- вызываем метод getStars() и передаём рейтинг товара -->
+      <span class="stars">{{ getStars(product.rating) }}</span>
+      <span class="rating-num">{{ product.rating }}</span>
+    </div>
+
+    <!-- | number — pipe, форматирует число: 389990 → 389,990 -->
+    <p class="card-price">{{ product.price | number }} ₸</p>
+
+    <div class="card-actions">
+      <a [href]="product.link" target="_blank" class="btn-buy">Купить</a>
+      
+      <!-- (click) — event binding, вызывает метод при клике -->
+      <button (click)="shareOnWhatsApp()" class="btn-share whatsapp">WhatsApp</button>
+      <button (click)="shareOnTelegram()" class="btn-share telegram">Telegram</button>
+    </div>
+    </div>
+</div>

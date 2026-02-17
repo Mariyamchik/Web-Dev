@@ -1,0 +1,18 @@
+<div class="page">
+
+  <!-- заголовок страницы -->
+  <h1 class="page-title">Каталог товаров</h1>
+  <p class="page-subtitle">Лучшие товары с Kaspi.kz</p>
+
+  <!-- сетка товаров -->
+  <div class="products-grid">
+
+    <!-- *ngFor — директива которая повторяет элемент для каждого товара в массиве -->
+    <!-- передаём каждый product в дочерний компонент через [product] — это @Input() -->
+    <app-product-card
+      *ngFor="let product of products"
+      [product]="product">
+    </app-product-card>
+
+  </div>
+</div>
