@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: #f5f5f5;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 2.5rem 2rem 1.5rem;
+}
+
+.store {
+  padding: 0 2rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.categories {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.categories button {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.6rem 1.6rem;
+  border: 2px solid #ddd;
+  background: #fff;
+  color: #888;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: all 0.2s ease;
+}
+
+.categories button:hover {
+  border-color: #ff4d00;
+  color: #ff4d00;
+}
+
+.categories button.active {
+  background: #ff4d00;
+  border-color: #ff4d00;
+  color: #fff;
+}
+
+.welcome {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #bbb;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

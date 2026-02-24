@@ -17,12 +17,16 @@
         <span class="rating-num">{{ product.rating }}</span>
         </div>
 
+        <div class="card-likes">
+        <button (click)="onLike()">❤</button>
+        <span>{{ product.likes }}</span>
+        </div>
         <!-- | number — pipe, форматирует число: 389990 → 389,990 -->
-        <p class="card-price">{{ product.price | number }} ₸</p>
-
+        <p class="card-price">{{ product.price }} ₸</p> 
         <div class="card-actions">
         <a [href]="product.link" target="_blank" class="btn-buy">Купить</a>
-        
+        <button (click)="onDelete()" class="btn-delete">🗑 Удалить</button>
+
         <!-- (click) — event binding, вызывает метод при клике -->
         <button (click)="shareOnWhatsApp()" class="btn-share whatsapp">WhatsApp</button>
         <button (click)="shareOnTelegram()" class="btn-share telegram">Telegram</button>

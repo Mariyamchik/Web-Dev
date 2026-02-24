@@ -1,1 +1,18 @@
-<app-product-list></app-product-list>
+<h1>Лучшие товары с Каспи.kz</h1>
+
+
+<div class="store">
+  <div class="categories">
+    @for(category of categories; track category.id){
+      <button (click)="selectedCategory(category.id)" [class.active]="category.id === selectedCategoriesId">
+        {{ category.name }}
+      </button>
+    }
+  </div>
+
+  @if (selectedCategoriesId != null){
+    <app-product-list [products]="selectedProducts"></app-product-list>
+  } @else {
+    <p class="welcome">↑ Выберите категорию</p>
+  }
+</div>

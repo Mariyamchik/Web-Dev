@@ -1,0 +1,31 @@
+<div class="card">
+<!--создаю картинку, которая отсылает меня на магазин каспи, передаю значения из product.list.ts благодаря propery binding-->
+    <a [href]="product.link" target="_blank" >
+        <img [src]="product.image" [alt]="product.name" class="card-img" />
+    </a>
+
+    <div class="card-body">
+        <!-- название -->
+        <h3 class="card-tittle">
+            {{product.name}}
+        </h3>
+        <!-- описание -->
+        <p class="card-description">
+            {{product.description}}
+        </p>
+        <!-- звезды -->
+         <div class="card-rating">
+             <span class="card-stars"> {{getStars(product.rating)}} </span>
+             <span class="card-number"> {{product.rating}} </span>
+         </div>
+        <!-- цена -->
+         <p class="card-price">{{product.price | number}} ₸</p>
+
+        <!-- кнопки -->
+         <div class="card-buttons">
+            <a [href]="product.link" target="_blank" class="btn_buy"> Купить </a>
+            <button (click)="shareOnWApp()" class="wUP">WhatsApp</button>
+            <button (click)="shareOnTG()" class="tg">Telegram</button>
+         </div>
+    </div>
+</div>

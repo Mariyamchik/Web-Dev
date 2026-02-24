@@ -1,0 +1,10 @@
+<div class="main-page">
+
+    <!-- Заголовок -->
+    <h1 class="tittle">Каталог товаров с каспи КЗ </h1>    
+    <p class="subtittle">Лучшие товары с Kaspi.kz </p>
+
+    <div class="display-grid">
+        <app-product-card *ngFor="let product of products" [product]="product"> </app-product-card>        
+    </div>
+</div>

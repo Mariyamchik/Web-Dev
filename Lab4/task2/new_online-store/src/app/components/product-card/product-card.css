@@ -1,0 +1,122 @@
+/* карточка товара */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+/* при наведении карточка немного поднимается */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* изображение товара */
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /* обрезает картинку не искажая пропорции */
+}
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1; /* растягивает body чтобы кнопки были внизу */
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.card-description {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* блок рейтинга */
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-stars {
+  color: #f5a623; /* золотой цвет звёзд */
+  font-size: 1rem;
+}
+
+.card-number {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* цена */
+.card-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e31e24; /* красный как на kaspi */
+  margin: 0;
+}
+
+/* кнопки внизу карточки */
+.card-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: auto; /* прижимает кнопки к низу карточки */
+  flex-wrap: wrap;
+}
+
+.btn_buy {
+  flex: 1;
+  background: #e31e24;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn-buy:hover {
+  background: #c0181d;
+}
+
+.wUP, .tg{
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-share:hover {
+  opacity: 0.85;
+}
+
+/* зелёный для WhatsApp */
+.wUP {
+  background: #25d366;
+  color: #fff;
+}
+
+/* синий для Telegram */
+.tg {
+  background: #0088cc;
+  color: #fff;
+}
