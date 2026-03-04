@@ -1,0 +1,44 @@
+.album-card {
+  background: var(--card-bg);
+  border-left: 5px solid var(--primary-color); /* Фиолетовая полоска слева */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+h2 { color: var(--primary-color); }
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Кнопка Edit (Красная) */
+.btn-edit {
+  background-color: var(--error-color);
+  color: white;
+}
+
+/* Кнопка View Photos (Фиолетовая светлая) */
+.btn-view {
+  background-color: #f3e5f5;
+  color: var(--primary-color);
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* Кнопка Back (Серая) */
+.btn-back {
+  background-color: #f1f2f6;
+  color: var(--text-muted);
+  width: 100%;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+}

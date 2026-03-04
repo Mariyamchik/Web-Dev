@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #6200ee;    /* Основной фиолетовый */
+  --secondary-color: #03dac6;  /* Бирюзовый для акцентов */
+  --background-bg: #f5f6fa;    /* Фон страницы */
+  --card-bg: #ffffff;          /* Фон карточек */
+  --text-main: #2d3436;        /* Цвет текста */
+  --text-muted: #636e72;       /* Вспомогательный текст */
+  --error-color: #ff5252;      /* Красный для кнопок удаления/ошибок */
+}
+
+body {
+  background-color: var(--background-bg);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
