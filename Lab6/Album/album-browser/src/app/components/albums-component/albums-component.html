@@ -1,0 +1,8 @@
+<div *ngIf="loading()" class="loading">Loading...</div>
+
+<ul *ngIf="!loading()">
+  <li *ngFor="let album of albums()" (click)="goToAlbum(album.id)" style="cursor: pointer;">
+    {{ album.title }} - {{ album.artist }}
+    <button (click)="deleteAlbum(album.id, $event)">Delete</button>
+  </li>
+</ul>

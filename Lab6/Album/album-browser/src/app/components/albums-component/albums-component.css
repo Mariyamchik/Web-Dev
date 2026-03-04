@@ -1,0 +1,50 @@
+.albums {
+  padding: 24px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+li:hover {
+  background: #e0e0e0;
+}
+
+.album-id {
+  color: #888;
+  min-width: 40px;
+}
+
+.album-title {
+  flex: 1;
+}
+
+button {
+  padding: 6px 12px;
+  background: #e53935;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c62828;
+}
+
+.loading {
+  color: #888;
+  font-size: 18px;
+}
