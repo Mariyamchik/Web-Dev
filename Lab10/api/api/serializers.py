@@ -10,12 +10,6 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = ['id', 'name', 'price', 'description', 'count', 'is_active', 'category']
+        
 
-    def validate_price(self,value):
-        if value <= 0:
-            raise serializers.ValidationError("Цена > 0")
-        return value
-    def validate_name(self, value):
-        if Product.objects.filter(name=value).exists():
-            raise serializers.ValidationError("Продукт должен быть uniq.")
-        return value
+

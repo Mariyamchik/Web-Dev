@@ -10,14 +10,6 @@ from .serializers import CategorySerializer, ProductSerializer
 
 def product_list(request):
     products = Product.objects.all()
-    min_price = request.GET.get('min_price')
-    max_price = request.GET.get('max_price')
-    
-    if min_price:
-        products = products.filter(price__gte=min_price)
-        
-    if max_price:
-        products = products.filter(price__lte=max_price)
     data = {
         'products': list(products.values())
     }
@@ -62,7 +54,7 @@ def products_by_category(request, id):
     try:
         category = Category.objects.get(id=id)
         products = category.products.all()
-
+        
         return JsonResponse({
             "products": list(products.values())
         })
@@ -79,12 +71,12 @@ class CategoryViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=['get'])
     def products(self, request, pk=None):
         category = self.get_object()
-        products = category.products.all()  # или product_set.all()
+        products = category.products.all()
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
 
 
 class ProductViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.all() 
+    queryset = Product.objects.all()
     serializer_class = ProductSerializer
     
